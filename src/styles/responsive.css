@@ -1,0 +1,1631 @@
+/* =========================================================
+   Responsive layout
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  :root {
+    --page-gutter: 22px;
+  }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(390px, 0.9fr);
+    gap: 34px;
+  }
+
+  .hero__art {
+    min-height: 500px;
+  }
+
+  .hero__kitty-wrap {
+    width: min(315px, 74%);
+  }
+
+  .hero__day-badge {
+    right: 0;
+    width: 108px;
+    height: 108px;
+  }
+
+  .hero__day-badge strong {
+    font-size: 33px;
+  }
+
+  .hero__title {
+    font-size: clamp(3.1rem, 5.8vw, 4.5rem);
+  }
+
+  .gallery-wall {
+    column-count: 3;
+  }
+
+  .gacha-layout {
+    gap: 34px;
+  }
+
+  .collection-shelf {
+    padding: 24px 20px 19px;
+  }
+
+  .collection-shelf__grid {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section {
+    padding: 108px 0;
+  }
+
+  .hero {
+    padding-top: calc(var(--safe-top) + 120px);
+  }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(350px, 0.86fr);
+    gap: 24px;
+  }
+
+  .hero__art {
+    min-height: 450px;
+  }
+
+  .hero__halo {
+    width: min(370px, 100%);
+  }
+
+  .hero__kitty-wrap {
+    width: min(280px, 74%);
+  }
+
+  .hero__polaroid {
+    bottom: 18px;
+    width: 147px;
+  }
+
+  .hero__hand-note {
+    right: 0;
+    bottom: 55px;
+    font-size: 12px;
+  }
+
+  .hero__doodle-bow {
+    width: 54px;
+  }
+
+  .timeline-item__card {
+    padding: 18px;
+  }
+
+  .timeline-item__body h3 {
+    font-size: 18px;
+  }
+
+  .timeline-item__kitty {
+    width: 92px;
+  }
+
+  .timeline-item__bow {
+    width: 86px;
+  }
+
+  .gift-letter {
+    padding: 32px 28px 24px;
+  }
+
+  .gift-photo {
+    max-width: 370px;
+  }
+}
+
+/* Tablet: switch to a centered visual composition */
+@media (max-width: 960px) {
+  .site-header {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    bottom: calc(9px + var(--safe-bottom));
+    left: 50%;
+    z-index: 120;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: min(520px, calc(100% - 20px));
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 22px;
+    background: rgba(255, 249, 247, 0.9);
+    box-shadow: 0 12px 38px rgba(83, 48, 59, 0.15);
+    transform: translateX(-50%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .mobile-nav__link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-width: 0;
+    min-height: 51px;
+    border-radius: 16px;
+    color: var(--chocolate-soft);
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .mobile-nav__link.is-active {
+    color: var(--rose-deep);
+    background: rgba(255, 214, 229, 0.43);
+  }
+
+  .mobile-nav__icon {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 24px;
+  }
+
+  .mobile-nav__link.is-active .mobile-nav__icon::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    width: 24px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--rose);
+    opacity: 0.28;
+  }
+
+  .mobile-nav__label {
+    overflow: hidden;
+    max-width: 100%;
+    font-size: 8.5px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .site-footer {
+    padding-bottom: calc(112px + var(--safe-bottom));
+  }
+
+  .hero {
+    min-height: auto;
+    padding: calc(var(--safe-top) + 132px) 0 84px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 26px;
+  }
+
+  .hero__copy {
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .hero__title {
+    font-size: clamp(3rem, 7.5vw, 4.15rem);
+  }
+
+  .hero__title-sparkle {
+    right: 7%;
+  }
+
+  .hero__subtitle {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero__actions,
+  .hero__meta {
+    justify-content: center;
+  }
+
+  .hero__art {
+    width: min(100%, 475px);
+    min-height: 445px;
+    margin: 8px auto 0;
+  }
+
+  .hero__halo {
+    width: min(395px, 91%);
+  }
+
+  .hero__kitty-wrap {
+    width: min(294px, 68%);
+  }
+
+  .hero__polaroid {
+    bottom: 14px;
+    left: 0;
+    width: 148px;
+  }
+
+  .hero__day-badge {
+    top: 23px;
+    right: 2%;
+    width: 101px;
+    height: 101px;
+  }
+
+  .hero__day-badge strong {
+    font-size: 31px;
+  }
+
+  .hero__doodle-bow {
+    top: 62%;
+    left: 1%;
+    width: 54px;
+  }
+
+  .hero__hand-note {
+    right: 1%;
+    bottom: 8px;
+  }
+
+  .hero__doodle-star--one {
+    left: 5%;
+  }
+
+  .hero__scroll-cue {
+    display: none;
+  }
+
+  .gallery-heading-row {
+    gap: 24px;
+  }
+
+  .gallery-heading-sticker {
+    flex-basis: 135px;
+  }
+
+  .gallery-heading-sticker__face {
+    width: 88px;
+  }
+
+  .gacha-layout {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+    gap: 47px;
+  }
+
+  .gacha-machine {
+    width: min(354px, calc(100vw - 80px));
+  }
+
+  .collection-shelf {
+    width: 100%;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+  .collection-shelf__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gift-reveal__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 600px;
+    gap: 35px;
+  }
+
+  .gift-photo {
+    justify-self: center;
+    width: min(370px, 88vw);
+  }
+
+  .gift-letter {
+    width: min(600px, 100%);
+    justify-self: center;
+  }
+
+  .gift-final-line {
+    margin-top: 44px;
+  }
+
+  .gift-section {
+    padding-bottom: 116px;
+  }
+
+  .site-footer {
+    padding-top: 44px;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --page-gutter: 16px;
+  }
+
+  html {
+    scroll-padding-top: 74px;
+  }
+
+  .section {
+    padding: 90px 0;
+    scroll-margin-top: 64px;
+  }
+
+  .section-heading {
+    margin-bottom: 42px;
+  }
+
+  .section-heading__meta {
+    margin-bottom: 12px;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+  }
+
+  .section-heading__bow {
+    width: 25px;
+  }
+
+  .section-heading__title {
+    font-size: clamp(1.88rem, 7vw, 2.45rem);
+    line-height: 1.3;
+  }
+
+  .section-heading__underline {
+    margin-top: 13px;
+    margin-bottom: 16px;
+  }
+
+  .section-heading__subtitle {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .site-header {
+    padding-top: calc(var(--safe-top) + 10px);
+    padding-bottom: 10px;
+  }
+
+  .site-brand {
+    min-height: 42px;
+    padding: 6px 12px 6px 8px;
+  }
+
+  .site-brand__mark {
+    width: 29px;
+    flex-basis: 29px;
+  }
+
+  .site-brand__name {
+    font-size: 14px;
+  }
+
+  .site-brand__sub {
+    font-size: 6px;
+  }
+
+  .hero {
+    padding: calc(var(--safe-top) + 94px) 0 52px;
+  }
+
+  .hero__inner {
+    gap: 14px;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 15px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.52rem, 10.2vw, 3.35rem);
+    line-height: 1.14;
+  }
+
+  .hero__title-sparkle {
+    top: -7px;
+    right: 4%;
+    width: 18px;
+  }
+
+  .hero__subtitle {
+    margin-top: 15px;
+    font-size: 13.5px;
+    line-height: 1.88;
+  }
+
+  .hero__actions {
+    gap: 5px;
+    margin-top: 20px;
+  }
+
+  .primary-button {
+    min-height: 50px;
+    padding: 12px 23px;
+    font-size: 13px;
+  }
+
+  .text-button {
+    min-height: 44px;
+    font-size: 11px;
+  }
+
+  .hero__meta {
+    margin-top: 15px;
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+  .hero__art {
+    min-height: 308px;
+    margin-top: 0;
+  }
+
+  .hero__halo {
+    width: min(294px, 92%);
+  }
+
+  .hero__kitty-wrap {
+    width: min(220px, 67%);
+  }
+
+  .hero__polaroid {
+    bottom: 0;
+    left: 0;
+    width: 102px;
+    padding: 6px 6px 7px;
+  }
+
+  .hero__polaroid figcaption {
+    margin-top: 5px;
+    font-size: 9px;
+  }
+
+  .hero__polaroid-tape {
+    width: 39px;
+    height: 14px;
+  }
+
+  .hero__day-badge {
+    top: 2px;
+    right: 0;
+    width: 75px;
+    height: 75px;
+  }
+
+  .hero__day-badge strong {
+    font-size: 24px;
+  }
+
+  .hero__day-badge-note {
+    font-size: 6.5px;
+  }
+
+  .hero__doodle-bow {
+    top: 63%;
+    left: 0;
+    width: 43px;
+  }
+
+  .hero__hand-note {
+    display: none;
+  }
+
+  .hero__doodle-star--two {
+    right: 0;
+    bottom: 11%;
+  }
+
+  .hero__blob--one {
+    width: 78vw;
+    height: 78vw;
+  }
+
+  .hero__blob--two {
+    width: 63vw;
+    height: 63vw;
+  }
+
+  .hero__check {
+    width: 380px;
+    height: 290px;
+  }
+
+  .gallery-section__star--one {
+    left: 2%;
+  }
+
+  .gallery-heading-row {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .gallery-heading {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .gallery-heading-sticker {
+    flex: 0 0 105px;
+    margin-top: 4px;
+    padding: 8px 8px 9px;
+    border-radius: 14px;
+  }
+
+  .gallery-heading-sticker__face {
+    width: 70px;
+  }
+
+  .gallery-heading-sticker__text {
+    margin-top: 1px;
+    font-size: 8px;
+  }
+
+  .gallery-heading-sticker__bow {
+    top: 34px;
+    right: -12px;
+    width: 39px;
+  }
+
+  .gallery-footnote {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+
+  .gallery-wall {
+    column-count: 2;
+    column-gap: 12px;
+    margin-top: 28px;
+  }
+
+  .gallery-item {
+    margin-bottom: 13px;
+  }
+
+  .polaroid-card {
+    padding: 7px 7px 11px;
+    border-radius: 3px;
+  }
+
+  .polaroid-card__tape {
+    top: -7px;
+    left: 15px;
+    width: 39px;
+    height: 14px;
+  }
+
+  .polaroid-card__tape--right {
+    right: 15px;
+  }
+
+  .polaroid-card__number {
+    top: 11px;
+    right: 11px;
+    width: 21px;
+    height: 21px;
+    font-size: 6px;
+  }
+
+  .polaroid-card__caption {
+    padding: 8px 2px 0;
+  }
+
+  .polaroid-card__meta {
+    font-size: 6px;
+    letter-spacing: 0.08em;
+  }
+
+  .polaroid-card__title {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .polaroid-card__description {
+    display: none;
+  }
+
+  .polaroid-card__sparkle {
+    right: 10px;
+    bottom: 8px;
+    font-size: 8px;
+  }
+
+  .gallery-end-note {
+    margin-top: 14px;
+  }
+
+  .photo-lightbox-modal {
+    width: 94vw;
+  }
+
+  .photo-lightbox__stage {
+    min-height: 190px;
+    padding: 48px 38px 15px;
+  }
+
+  .photo-lightbox__image {
+    max-height: 56dvh;
+  }
+
+  .photo-lightbox__arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .photo-lightbox__arrow--prev {
+    left: 8px;
+  }
+
+  .photo-lightbox__arrow--next {
+    right: 8px;
+  }
+
+  .photo-lightbox__caption {
+    padding: 16px 20px 22px;
+  }
+
+  .photo-lightbox__caption h3 {
+    font-size: 20px;
+  }
+
+  .photo-lightbox__caption p {
+    font-size: 12px;
+  }
+
+  .timeline-section__kitty {
+    bottom: 3%;
+    left: 0;
+    width: 95px;
+    opacity: 0.19;
+  }
+
+  .timeline-section__bow {
+    top: 5%;
+    right: 0;
+    width: 55px;
+    opacity: 0.28;
+  }
+
+  .timeline {
+    margin-top: 39px;
+    padding: 4px 0 0;
+  }
+
+  .timeline__line {
+    top: 12px;
+    bottom: 12px;
+    left: 18px;
+  }
+
+  .timeline-item {
+    display: block;
+    padding-left: 45px;
+    margin-bottom: 27px;
+  }
+
+  .timeline-item__axis {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    display: flex;
+    width: 37px;
+    height: 37px;
+    align-self: auto;
+  }
+
+  .timeline-item__node {
+    width: 33px;
+    height: 33px;
+  }
+
+  .timeline-item__pulse {
+    width: 33px;
+    height: 33px;
+  }
+
+  .timeline-item__card {
+    padding: 15px;
+    border-radius: 18px;
+  }
+
+  .timeline-item__topline {
+    margin-bottom: 11px;
+  }
+
+  .timeline-item__date {
+    min-height: 23px;
+    padding: 3px 8px;
+    font-size: 8px;
+  }
+
+  .timeline-item__tag {
+    font-size: 8px;
+  }
+
+  .timeline-item__photo img {
+    max-height: 285px;
+  }
+
+  .timeline-item__blank {
+    min-height: 145px;
+    padding: 16px;
+  }
+
+  .timeline-item__blank-kitty {
+    width: 55px;
+  }
+
+  .timeline-item__body {
+    padding-top: 13px;
+  }
+
+  .timeline-item__body h3 {
+    font-size: 17px;
+  }
+
+  .timeline-item__body p {
+    font-size: 11.5px;
+  }
+
+  .timeline-item__ornament {
+    display: none;
+  }
+
+  .timeline-item__number {
+    right: 11px;
+    bottom: 7px;
+    font-size: 42px;
+  }
+
+  .timeline-note {
+    margin-top: 31px;
+    padding: 12px 6px 0;
+    font-size: 9px;
+    line-height: 1.8;
+  }
+
+  .letter-stage {
+    margin-top: 44px;
+  }
+
+  .letter-stage__kitty {
+    top: -31px;
+    right: -2px;
+    width: 83px;
+    opacity: 0.9;
+  }
+
+  .letter-stage__kitty-bow {
+    left: -17px;
+    width: 31px;
+  }
+
+  .envelope {
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 1.48;
+  }
+
+  .envelope__back,
+  .envelope__pocket {
+    border-radius: 11px;
+  }
+
+  .envelope__flap {
+    border-radius: 11px 11px 0 0;
+  }
+
+  .envelope__seal {
+    width: 62px;
+    height: 62px;
+    font-size: 8px;
+  }
+
+  .envelope__seal-bow {
+    width: 27px;
+  }
+
+  .envelope__address {
+    bottom: 9%;
+    left: 6%;
+  }
+
+  .envelope__to {
+    font-size: clamp(14px, 4.2vw, 19px);
+  }
+
+  .envelope__from {
+    font-size: 7px;
+  }
+
+  .envelope__hint {
+    right: 6%;
+    bottom: 8.5%;
+    font-size: 7.5px;
+  }
+
+  .envelope__hint svg {
+    width: 12px;
+  }
+
+  .envelope__heart-sticker {
+    width: 25px;
+    height: 25px;
+    font-size: 9px;
+  }
+
+  .envelope-caption {
+    margin-top: 19px;
+    font-size: 11px;
+  }
+
+  .envelope-caption__line {
+    width: 35px;
+  }
+
+  .letter-stage__below {
+    margin-top: 22px;
+  }
+
+  .letter-card {
+    padding: 31px 21px 23px;
+    border-radius: 5px;
+  }
+
+  .letter-card::before {
+    inset: 6px;
+  }
+
+  .letter-card__tape {
+    top: -9px;
+    width: 65px;
+    height: 20px;
+  }
+
+  .letter-card__tape--left {
+    left: 23px;
+  }
+
+  .letter-card__tape--right {
+    right: 23px;
+  }
+
+  .letter-card__header {
+    margin-bottom: 20px;
+  }
+
+  .letter-card__label {
+    font-size: 7px;
+    letter-spacing: 0.12em;
+  }
+
+  .letter-card__stamp {
+    width: 51px;
+    height: 51px;
+    font-size: 7px;
+  }
+
+  .letter-card__stamp-bow {
+    width: 20px;
+  }
+
+  .letter-card__greeting {
+    font-size: 23px;
+  }
+
+  .letter-card__body {
+    margin-top: 15px;
+  }
+
+  .letter-card__typed {
+    min-height: 15.5em;
+    font-size: 14px;
+    line-height: 2.03;
+  }
+
+  .letter-card__highlight {
+    gap: 6px;
+    padding: 13px 6px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .letter-card__highlight svg {
+    width: 11px;
+  }
+
+  .letter-card__signature {
+    font-size: 19px;
+  }
+
+  .letter-card__ps {
+    font-size: 10px;
+  }
+
+  .letter-card__watermark {
+    width: 105px;
+  }
+
+  .gacha-section__kitty {
+    right: -4%;
+    width: 130px;
+  }
+
+  .gacha-section__big-bow {
+    display: none;
+  }
+
+  .gacha-layout {
+    margin-top: 38px;
+    gap: 35px;
+  }
+
+  .machine-stage {
+    padding: 41px 4px 7px;
+  }
+
+  .machine-stage__halo {
+    width: 330px;
+    height: 330px;
+  }
+
+  .machine-stage__note {
+    display: none;
+  }
+
+  .gacha-machine {
+    width: min(330px, calc(100vw - 42px));
+    min-height: 480px;
+  }
+
+  .gacha-machine__dome {
+    height: 189px;
+    border-width: 7px;
+  }
+
+  .gacha-machine__ears {
+    top: -31px;
+    right: 27px;
+    left: 27px;
+  }
+
+  .gacha-machine__ear {
+    width: 70px;
+    height: 70px;
+    border-width: 3px;
+  }
+
+  .gacha-machine__bow {
+    top: -41px;
+    width: 79px;
+  }
+
+  .gacha-machine__body {
+    margin-top: -21px;
+    padding: 18px 19px 20px;
+    border-radius: 25px 25px 32px 32px;
+  }
+
+  .gacha-machine__brand-kitty {
+    width: 23px;
+    flex-basis: 23px;
+  }
+
+  .gacha-machine__brand-text {
+    font-size: 6px;
+  }
+
+  .gacha-machine__counter {
+    min-height: 84px;
+  }
+
+  .gacha-machine__counter strong {
+    font-size: 26px;
+  }
+
+  .gacha-machine__knob {
+    width: 83px;
+    height: 83px;
+  }
+
+  .gacha-machine__knob-disc {
+    width: 64px;
+    height: 64px;
+  }
+
+  .gacha-machine__knob-disc svg {
+    width: 23px;
+  }
+
+  .gacha-machine__knob-heart {
+    margin-top: 27px;
+  }
+
+  .gacha-machine__knob-ring {
+    inset: -6px;
+  }
+
+  .gacha-machine__output-door {
+    height: 54px;
+  }
+
+  .gacha-machine__side-heart {
+    display: none;
+  }
+
+  .capsule {
+    width: 48px;
+    height: 48px;
+  }
+
+  .gacha-draw-hint {
+    max-width: 330px;
+    margin-top: 19px;
+    font-size: 9.5px;
+  }
+
+  .collection-shelf {
+    max-width: 560px;
+    padding: 23px 17px 18px;
+    border-radius: 24px;
+  }
+
+  .collection-shelf h3 {
+    font-size: 22px;
+  }
+
+  .collection-shelf__hint {
+    font-size: 9.5px;
+  }
+
+  .collection-shelf__grid {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .collection-slot {
+    min-height: 64px;
+    border-radius: 14px;
+  }
+
+  .collection-slot--filled {
+    padding: 8px 6px;
+    gap: 5px;
+  }
+
+  .gacha-result-modal {
+    width: 92vw;
+  }
+
+  .gacha-result {
+    padding: 24px 18px 25px;
+  }
+
+  .gacha-result__header {
+    padding-right: 62px;
+  }
+
+  .gacha-result__capsule-badge {
+    top: 66px;
+    right: 16px;
+    width: 48px;
+  }
+
+  .gacha-result__capsule-badge .capsule {
+    width: 45px;
+    height: 45px;
+  }
+
+  .gacha-result__polaroid {
+    width: 83%;
+    margin-top: 21px;
+  }
+
+  .gacha-result__copy {
+    margin-top: 17px;
+  }
+
+  .gacha-result__copy h3 {
+    font-size: 21px;
+  }
+
+  .gacha-result__copy p {
+    font-size: 11.5px;
+  }
+
+  .modal-backdrop {
+    align-items: center;
+    padding: calc(12px + var(--safe-top)) calc(10px + var(--safe-right)) calc(12px + var(--safe-bottom))
+      calc(10px + var(--safe-left));
+  }
+
+  .modal-close {
+    top: 9px;
+    right: 9px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .gift-section {
+    padding-bottom: 91px;
+  }
+
+  .gift-section__kitty {
+    width: 135px;
+  }
+
+  .gift-stage {
+    margin-top: 40px;
+  }
+
+  .gift-box {
+    width: min(275px, 76vw);
+    height: 265px;
+    margin-top: 34px;
+  }
+
+  .gift-box__lid {
+    top: 39px;
+    height: 68px;
+  }
+
+  .gift-box__body {
+    top: 106px;
+  }
+
+  .gift-box__tag {
+    right: 8px;
+    bottom: 13px;
+    width: 53px;
+    padding: 5px 4px;
+    font-size: 6.5px;
+  }
+
+  .gift-box__tag-kitty {
+    width: 25px;
+  }
+
+  .gift-closed__hint {
+    margin-top: 18px;
+    font-size: 9.5px;
+  }
+
+  .gift-reveal__eyebrow {
+    margin-bottom: 28px;
+    font-size: 9px;
+  }
+
+  .gift-reveal__content {
+    gap: 29px;
+  }
+
+  .gift-photo {
+    width: min(340px, 88vw);
+  }
+
+  .gift-photo__badge {
+    top: 18px;
+    right: -10px;
+    width: 65px;
+    height: 65px;
+  }
+
+  .gift-photo__badge strong {
+    font-size: 19px;
+  }
+
+  .gift-photo__bow {
+    right: -11px;
+    bottom: 27px;
+    width: 53px;
+  }
+
+  .gift-photo__frame img {
+    max-height: 480px;
+  }
+
+  .gift-photo figcaption {
+    font-size: 10px;
+  }
+
+  .gift-letter {
+    padding: 31px 21px 23px;
+    border-radius: 18px;
+  }
+
+  .gift-letter__kitty {
+    top: 15px;
+    right: 13px;
+    width: 47px;
+  }
+
+  .gift-letter h3 {
+    font-size: 22px;
+  }
+
+  .gift-letter__body p {
+    font-size: 11.8px;
+  }
+
+  .gift-letter__highlight {
+    padding: 14px 12px;
+  }
+
+  .gift-letter__highlight p {
+    font-size: 16px;
+  }
+
+  .gift-letter__signature {
+    font-size: 16px;
+  }
+
+  .gift-final-line {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 35px;
+    padding: 0 15px;
+  }
+
+  .gift-final-line p {
+    flex: 0 0 100%;
+    order: 3;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .gift-final-line__bow {
+    width: 30px;
+  }
+
+  .gift-confetti__piece {
+    font-size: 12px;
+  }
+
+  .site-footer {
+    padding: 34px 17px calc(102px + var(--safe-bottom));
+  }
+
+  .site-footer__note {
+    font-size: 11px;
+  }
+
+  .site-footer__signature {
+    font-size: 15px;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 8px;
+  }
+
+  .site-footer__dot {
+    display: none;
+  }
+
+  .site-footer__heart {
+    right: 4%;
+    bottom: 19%;
+  }
+}
+
+@media (max-width: 430px) {
+  .section {
+    padding: 78px 0;
+  }
+
+  .site-brand__sub {
+    display: none;
+  }
+
+  .hero {
+    padding-top: calc(var(--safe-top) + 76px);
+  }
+
+  .hero__inner {
+    gap: 10px;
+  }
+
+  .hero__title {
+    font-size: clamp(2.35rem, 10.5vw, 2.8rem);
+  }
+
+  .hero__eyebrow {
+    font-size: 7.5px;
+    letter-spacing: 0.11em;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .primary-button {
+    width: min(245px, 100%);
+  }
+
+  .hero__art {
+    min-height: 265px;
+  }
+
+  .hero__halo {
+    width: min(252px, 94%);
+  }
+
+  .hero__kitty-wrap {
+    width: min(190px, 68%);
+  }
+
+  .hero__polaroid {
+    width: 88px;
+  }
+
+  .hero__day-badge {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero__day-badge strong {
+    font-size: 21px;
+  }
+
+  .hero__day-badge-top,
+  .hero__day-badge-bottom {
+    font-size: 5.5px;
+  }
+
+  .hero__meta {
+    font-size: 8px;
+  }
+
+  .gallery-heading-sticker {
+    flex-basis: 90px;
+  }
+
+  .gallery-heading-sticker__face {
+    width: 60px;
+  }
+
+  .gallery-heading-sticker__text {
+    font-size: 7px;
+  }
+
+  .gallery-heading-sticker__bow {
+    width: 32px;
+    right: -9px;
+  }
+
+  .polaroid-card__title {
+    font-size: 11px;
+  }
+
+  .timeline-item {
+    padding-left: 41px;
+  }
+
+  .timeline-section__star,
+  .letter-section__star {
+    display: none;
+  }
+
+  .letter-stage__kitty {
+    top: -21px;
+    width: 69px;
+  }
+
+  .envelope {
+    aspect-ratio: 1.4;
+  }
+
+  .envelope__seal {
+    width: 55px;
+    height: 55px;
+  }
+
+  .envelope__hint {
+    font-size: 6.8px;
+  }
+
+  .letter-card {
+    padding: 28px 17px 20px;
+  }
+
+  .letter-card__typed {
+    font-size: 13.5px;
+  }
+
+  .letter-card__skip {
+    font-size: 9.5px;
+  }
+
+  .letter-card__highlight {
+    flex-wrap: wrap;
+  }
+
+  .gacha-machine {
+    width: min(322px, calc(100vw - 32px));
+  }
+
+  .gacha-machine__body {
+    padding: 17px 15px 18px;
+  }
+
+  .gacha-machine__controls {
+    gap: 7px;
+  }
+
+  .gacha-machine__counter {
+    padding: 7px 4px;
+  }
+
+  .gacha-machine__counter-top {
+    font-size: 5.5px;
+    letter-spacing: 0.07em;
+  }
+
+  .gacha-machine__counter strong {
+    font-size: 24px;
+  }
+
+  .gacha-machine__knob {
+    width: 78px;
+    height: 78px;
+  }
+
+  .gacha-machine__knob-disc {
+    width: 60px;
+    height: 60px;
+  }
+
+  .collection-shelf {
+    padding: 20px 13px 16px;
+  }
+
+  .collection-shelf__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .collection-slot--filled {
+    padding: 7px 5px;
+  }
+
+  .collection-slot--filled .capsule {
+    flex-basis: 33px;
+    width: 33px;
+    height: 33px;
+  }
+
+  .collection-slot__caption strong {
+    font-size: 8.5px;
+  }
+
+  .collection-slot__caption > span {
+    font-size: 5.5px;
+  }
+
+  .gacha-result {
+    padding: 22px 14px 23px;
+  }
+
+  .gacha-result__polaroid {
+    width: 86%;
+  }
+
+  .gacha-result__copy p {
+    font-size: 11px;
+  }
+
+  .gift-box {
+    width: min(258px, 78vw);
+    height: 255px;
+  }
+
+  .gift-letter {
+    padding: 28px 18px 21px;
+  }
+
+  .gift-letter__body p {
+    font-size: 11.3px;
+  }
+
+  .gift-letter__highlight p {
+    font-size: 15px;
+  }
+
+  .gift-final-line p {
+    font-size: 15px;
+  }
+
+  .photo-lightbox__stage {
+    padding-right: 38px;
+    padding-left: 38px;
+  }
+
+  .photo-lightbox__arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .photo-lightbox__caption {
+    padding: 14px 16px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-nav {
+    width: calc(100% - 12px);
+    padding: 4px;
+  }
+
+  .mobile-nav__link {
+    min-height: 49px;
+  }
+
+  .mobile-nav__label {
+    font-size: 8px;
+  }
+
+  .hero__title {
+    font-size: 2.3rem;
+  }
+
+  .hero__art {
+    min-height: 272px;
+  }
+
+  .hero__halo {
+    width: 252px;
+  }
+
+  .hero__kitty-wrap {
+    width: 194px;
+  }
+
+  .hero__polaroid {
+    width: 88px;
+  }
+
+  .hero__day-badge {
+    width: 63px;
+    height: 63px;
+  }
+
+  .gallery-heading-sticker {
+    display: none;
+  }
+
+  .gallery-wall {
+    column-gap: 9px;
+  }
+
+  .gacha-machine {
+    width: calc(100vw - 26px);
+  }
+
+  .gacha-machine__brand-hearts {
+    display: none;
+  }
+
+  .collection-slot--filled .capsule {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .collection-slot__caption strong {
+    font-size: 8px;
+  }
+
+  .gift-box {
+    width: 242px;
+  }
+}
