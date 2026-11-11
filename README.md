@@ -4,6 +4,14 @@
 
 技术栈：React 19、Vite 8、Framer Motion、Lucide、纯 CSS。没有背景音乐。
 
+## 线上地址
+
+已通过 GitHub Pages 部署：<https://one2freezz7-dot.github.io/-niuniu/>
+
+仓库：<https://github.com/one2freezz7-dot/-niuniu>
+
+推送 `main` 分支后，GitHub Actions 会自动构建并发布（配置见 `.github/workflows/deploy.yml`）。首次部署需要在仓库 Settings → Pages 把 Source 设为 **GitHub Actions**。
+
 ## 先运行起来
 
 项目位置：`C:\Users\35798\kitty-birthday`
